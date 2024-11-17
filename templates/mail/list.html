@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block custom_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/list.css') }}">
+{% endblock %}
+
+{% block content %}
+    <main class="w-100 m-auto">
+        <h1 class="h3 mb-3">All Templates</h1>
+
+        <div class="center-content">
+            <ul class="list-group">
+                {% for mail in mails %}
+                    <a href="/mail/edit/{{ mail.id }}">
+                        <li class="list-group-item ">{{ mail.subject }} | {{ mail.created_at }}</li>
+                    </a>
+
+                {% endfor %}
+            </ul>
+
+            <button id="mail-create" class="btn fourth-bg-color main-bg-color w-25 py-2">Create Template</button>
+        </div>
+
+    </main>
+{% endblock %}

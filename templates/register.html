@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+
+{% block custom_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                {% if category == 'error' %}
+                <div class="alert alert-danger m-2" role="alert">
+                    {{ message }}
+                </div>
+                {% elif category == 'success' %}
+                <div class="alert alert-info m-2" role="alert">
+                    {{ message }}
+                </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <main class="form-signin w-100 m-auto">
+        <form action="{{ url_for('register') }}" method="post">
+            <h1 class="h3 mb-3 fw-normal">Register</h1>
+
+            <div class="form-floating pb-2">
+                <input type="text" class="form-control" id="username" name="username" required>
+                <label for="username">Username:</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="email" class="form-control" id="email" name="email" required>
+                <label for="email">Email:</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="password" class="form-control" id="password" name="password" required>
+                <label for="password">Password:</label>
+            </div>
+
+            <button class="btn fourth-bg-color main-bg-color w-100 py-2" type="submit">Register</button>
+        </form>
+    </main>
+{% endblock %}

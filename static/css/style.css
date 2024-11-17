@@ -1,0 +1,52 @@
+body {
+    background-color: #F8F0FB !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.main-bg-color {
+    color: #F8F0FB !important;
+}
+
+.main-bg-bg-color {
+    background-color: #F8F0FB !important;
+}
+
+.primary-color {
+    color: #040348 !important;
+}
+
+.primary-bg-color {
+    background-color: #040348 !important;
+}
+
+.secondary-color {
+    color: #DEDBFF !important;
+}
+
+.secondary-bg-color {
+    background-color: #DEDBFF !important;
+}
+
+.highlight-color {
+    color: #FFB800 !important;
+}
+
+.highlight-bg-color {
+    background-color: #FFB800 !important;
+}
+
+.third-color {
+    color: #330099 !important;
+}
+
+.third-bg-color {
+    background-color: #330099 !important;
+}
+
+.fourth-color {
+    color: #FD2282 !important;
+}
+
+.fourth-bg-color {
+    background-color: #FD2282 !important;
+}

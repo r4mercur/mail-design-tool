@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+
+{% block custom_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/list.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/template-creator.css') }}">
+{% endblock %}
+
+{% block content %}
+    <main class="w-100 m-auto">
+        <!-- layout selector for the mail template -->
+        <div>
+
+        </div>
+
+        <!-- components for the creation mail template -->
+        <div id="menu">
+            <h2>Elements</h2>
+            <div class="element" datatype="textbox">Textbox</div>
+            <div class="element" datatype="image">Image</div>
+            <div class="element" datatype="button">Button</div>
+        </div>
+
+        <div id="template-section">
+            <h2>Template</h2>
+
+            <!-- subject -->
+            <input id="subject" type="text" maxlength="100" placeholder="Mail subject" />
+            <div id="template-area"></div>
+        </div>
+
+        <div class="center-content mt-2">
+            <button id="save" class="btn fourth-bg-color main-bg-color w-25 py-2">Save</button>
+        </div>
+    </main>
+
+{% endblock %}
+
+{% block custom_js %}
+<script src="{{ url_for('static', filename='js/template-creator.js') }}"></script>
+{% endblock %}

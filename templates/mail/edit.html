@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+
+{% block custom_head %}
+{% endblock %}
+
+{% block content %}
+    <main class="w-100 m-auto">
+        <!-- layout selector for the mail template -->
+        <div>
+            <h2>Layout</h2>
+            <select id="layout-selector">
+                <option value="1">Layout 1</option>
+                <option value="2">Layout 2</option>
+                <option value="3">Layout 3</option>
+            </select>
+        </div>
+
+        <!-- components for the creation mail template -->
+        <div id="menu">
+            <h2>Elements</h2>
+            <div class="element" datatype="textbox">Textbox</div>
+            <div class="element" datatype="image">Image</div>
+            <div class="element" datatype="button">Button</div>
+        </div>
+
+        <div id="template-section">
+            <h2>Template</h2>
+
+            <!-- subject -->
+            <input id="subject" type="text" maxlength="100" placeholder="Mail subject" />
+            <div id="template-area"></div>
+        </div>
+
+        <div class="center-content mt-2">
+            <button id="save" class="btn fourth-bg-color main-bg-color w-25 py-2">Save</button>
+        </div>
+    </main>
+
+{% endblock %}
+
+{% block custom_js %}
+{% endblock %}
